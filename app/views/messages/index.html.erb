@@ -1,0 +1,29 @@
+<html>
+   <div>
+        <h1 class="title">PAX NATIONATICA</h1>
+        <h3 class="historic">Nations Rising and Falling Every Day</h3>
+        <br>
+        <ul class="sub">
+            <li>Bhutan</li>
+            <li>Italy</li>
+            <li>Peru</li>
+            <li>Phillipines</li>
+            <li>Sudan</li>
+            <li>The United States</li>
+        </ul>
+        <br>
+        <h3 class="main">Welcome: <strong><%= @user.username %></strong></h3>
+        <form action="/messages" method="post">
+        	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        	<textarea name="message[message]" class="message" cols="65" rows="3"></textarea>
+            <br>
+            <input type="submit" value="Post a Message">
+        </form>
+
+        <% @messages.each do |message| %>
+            <hr>
+            <h4 class="main"><%= "#{message.user.username} - #{message.created_at.strftime("%B #{message.created_at.day.ordinalize}, %Y")}" %></h4>
+        	<p class="sub"><%= message.message %></p>
+        <% end %>
+   </div>
+</html>

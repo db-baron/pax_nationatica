@@ -1,0 +1,10 @@
+<h1>Sign into Pax Nationatica</h1>
+<br>
+<form action="/login" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"
+	<h3>
+		<label>Username:</label>
+		<input type="text" name="username" id="username">
+	</h3>
+	<input type="submit" value="Sign In">
+</form>
