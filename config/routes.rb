@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get "/" => "users#new"
   get "users/new" => "users#new"
+
+  post "/register" => "users#register"
+
+
   post "/login" => "users#login"
   delete "logout" => "users#logout"
 
