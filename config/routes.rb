@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
-  get "/" => "users#new"
-  get "users/new" => "users#new"
 
-  post "/register" => "users#register"
+    root "users#new"
+    # get "/" => "users#new" # The same thing as root
 
+    get "users/new" => "users#new"
+    get "/index" => "messages#index"
 
-  post "/login" => "users#login"
-  delete "logout" => "users#logout"
+    post "/register" => "users#register"
 
-  get "messages" => "messages#index"
-  post "messages" => "messages#create"
+    post "/login" => "users#login"
+    delete "logout" => "users#logout"
+
+    get "messages" => "messages#index"
+    post "messages" => "messages#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
