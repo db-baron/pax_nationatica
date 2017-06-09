@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'nations/nationview'
+
     root "users#new"
     # get "/" => "users#new" # The same thing as root
 
@@ -13,6 +15,10 @@ Rails.application.routes.draw do
 
     get "messages" => "messages#index"
     post "messages" => "messages#create"
+
+    get "nations" => "nations#nationlist"
+    get "nations/:id" => "nations#show"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

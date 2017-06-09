@@ -11,6 +11,11 @@
           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select A Nation
           <span class="caret"></span></button>
             <ul class="dropdown-menu">
+                <% @nations.each do |nation| %>
+                	<h2><%= "#{message.user.username} - #{message.created_at.strftime("%B #{message.created_at.day.ordinalize}, %Y")}" %></h2>
+                	<li><a href="bhutan"<%= nations.nation %></a></li>
+                <% end %>
+
                 <li><a href="/bhutan">Bhutan</a></li>
                 <li><a href="/italy">Italy</a></li>
                 <li><a href="/peru">Peru</a></li>
