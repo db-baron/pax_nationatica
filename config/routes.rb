@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     get "messages" => "messages#index"
     post "messages" => "messages#create"
 
-    get "nations" => "nations#nationlist"
+    get "/nations" => "nations#index"
     get "nations/:id" => "nations#show"
 
 

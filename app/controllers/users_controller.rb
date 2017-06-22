@@ -17,8 +17,8 @@ class UsersController < ApplicationController
 
   def login
     ### Both of these find_by lines of code work for logging in ###
-    @user = User.find_by(username: params[:username])
-    # @user = User.find_by_username(params[:username])
+    @user = User.find_by(email: params[:email])
+    # @user = User.find_by_email(params[:email])
     if @user
        session[:user_id] = @user.id
        redirect_to "/messages"

@@ -7,23 +7,24 @@
         <h1 class="title">PAX NATIONATICA</h1>
         <h3 class="historic">Nations Rising and Falling Every Day</h3>
         <br>
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select A Nation
-          <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <% @nations.each do |nation| %>
-                	<h2><%= "#{message.user.username} - #{message.created_at.strftime("%B #{message.created_at.day.ordinalize}, %Y")}" %></h2>
-                	<li><a href="bhutan"<%= nations.nation %></a></li>
-                <% end %>
 
-                <li><a href="/bhutan">Bhutan</a></li>
-                <li><a href="/italy">Italy</a></li>
-                <li><a href="/peru">Peru</a></li>
-                <li><a href="/phillipines">Phillipines</a></li>
-                <li><a href="/sudan">Sudan</a></li>
-                <li><a href="/usa">The United States</a></li>
-            </ul>
+        <select name="nation_id">
+            <%= @nations.each do |nation| %>
+                <<option value="<%= nation.id %>"></option>
+            <% end %>
+        </select>
+
         </div>
+
+        <ul>
+            <li><a href="/bhutan">Bhutan</a></li>
+            <li><a href="/italy">Italy</a></li>
+            <li><a href="/peru">Peru</a></li>
+            <li><a href="/phillipines">Phillipines</a></li>
+            <li><a href="/sudan">Sudan</a></li>
+            <li><a href="/usa">The United States</a></li>
+        </ul>
+
         <br>
         <h3 class="main">Welcome: <strong><%= @user.email %></strong></h3>
         <form action="/messages" method="post">

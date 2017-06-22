@@ -1,4 +1,11 @@
 class NationsController < ApplicationController
-  def nationview
+  def index
+      @nations = Nation.all
+    #   redirect_to " "
   end
+
+  def show
 end
+
+
+@user = User.find_by(username: params[:username])
