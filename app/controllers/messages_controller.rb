@@ -6,6 +6,13 @@ class MessagesController < ApplicationController
     @messages = Message.includes(:user).order("created_at DESC").all
   end
 
+  def dropdown_menu
+      @nations = Nation.all
+    #   @messages = Message.includes(:user).order("created_at DESC").all
+    #   @nations = Nation.includes(:user).order("created_at DESC").all
+    # @nations = ["France", "Brasil", "Angola"]
+  end
+
   def create
     # render json: params
     @user = User.find(session[:user_id])

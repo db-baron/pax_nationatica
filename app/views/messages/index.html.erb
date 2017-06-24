@@ -8,13 +8,12 @@
         <h3 class="historic">Nations Rising and Falling Every Day</h3>
         <br>
 
-        <select name="nation_id">
-            <%= @nations.each do |nation| %>
-                <<option value="<%= nation.id %>"></option>
-            <% end %>
-        </select>
-
-        </div>
+        <% @nations.each do |nation| %>
+          <tr>
+            <td><%= nation.nation_name %></td>
+            <td><%= nation.empire %></td>
+          </tr>
+        <% end %>
 
         <ul>
             <li><a href="/bhutan">Bhutan</a></li>

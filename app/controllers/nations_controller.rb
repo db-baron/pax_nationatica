@@ -1,10 +1,11 @@
 class NationsController < ApplicationController
-  def index
+  def dropdown_menu
       @nations = Nation.all
-    #   redirect_to " "
+    #   @messages = Message.includes(:user).order("created_at DESC").all
+    #   @nations = Nation.includes(:user).order("created_at DESC").all
+    # @nations = ["France", "Brasil", "Angola"]
   end
 
-  def show
 end
 
 
