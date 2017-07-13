@@ -9,20 +9,19 @@
         <br>
 
         <% @nations.each do |nation| %>
-          <tr>
-            <td><%= nation.nation_name %></td>
-            <td><%= nation.empire %></td>
-          </tr>
+            <!-- <h4 class="nations"><%= nation.nation_name %></h4> -->
+            <!-- <p><%= nation.empire %></p> -->
+            <h4><li><a href="/<%= nation.nation_name %>"><%= nation.nation_name %></a></li></h4>
         <% end %>
 
-        <ul>
+        <!-- <ul>
             <li><a href="/bhutan">Bhutan</a></li>
             <li><a href="/italy">Italy</a></li>
             <li><a href="/peru">Peru</a></li>
             <li><a href="/phillipines">Phillipines</a></li>
             <li><a href="/sudan">Sudan</a></li>
             <li><a href="/usa">The United States</a></li>
-        </ul>
+        </ul> -->
 
         <br>
         <h3 class="main">Welcome: <strong><%= @user.email %></strong></h3>

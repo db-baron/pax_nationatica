@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'nations/nationview'
+    get 'nations/nationview'
 
     root "users#new"
     # get "/" => "users#new" # The same thing as root

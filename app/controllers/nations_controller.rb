@@ -1,5 +1,5 @@
 class NationsController < ApplicationController
-  def dropdown_menu
+  def index
       @nations = Nation.all
     #   @messages = Message.includes(:user).order("created_at DESC").all
     #   @nations = Nation.includes(:user).order("created_at DESC").all
