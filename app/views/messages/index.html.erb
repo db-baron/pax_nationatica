@@ -8,12 +8,32 @@
         <h3 class="historic">Nations Rising and Falling Every Day</h3>
         <br>
 
+        <br>
+        <h3 class="main">Welcome: <strong><%= @user.email %></strong></h3>
+
+        <h4>Select a Region and Time Period</h4>
+        <form action="/search" method="post">
+            <select name="continent">
+                <%= @nations.each do |nation| %>
+                    <option value="<%= nation.continent %>"><%= nation.continent %></option>
+                <% end %>
+            </select>
+            <select name="timeperiod">
+                <%= @nations.each do |nation| %>
+                    <option value="<%= nation.timeperiod %>"><%= nation.timeperiod %></option>
+                <% end %>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <h4>OR search from the master list of nations....</h4>
         <% @nations.each do |nation| %>
             <!-- <h4 class="nations"><%= nation.nation_name %></h4> -->
             <!-- <p><%= nation.empire %></p> -->
             <h4><li><a href="/<%= nation.nation_name %>"><%= nation.nation_name %></a></li></h4>
         <% end %>
-
+        <br>
+        <br>
         <!-- <ul>
             <li><a href="/bhutan">Bhutan</a></li>
             <li><a href="/italy">Italy</a></li>
@@ -23,11 +43,11 @@
             <li><a href="/usa">The United States</a></li>
         </ul> -->
 
-        <br>
-        <h3 class="main">Welcome: <strong><%= @user.email %></strong></h3>
+
+        <h3 class="main">Comments</h3>
         <form action="/messages" method="post">
-        	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        	<textarea name="message[message]" class="message" cols="65" rows="3"></textarea>
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <textarea name="message[message]" class="message" cols="65" rows="3"></textarea>
             <br>
             <input type="submit" value="Post a Message">
         </form>

@@ -6,6 +6,10 @@ class NationsController < ApplicationController
     # @nations = ["France", "Brasil", "Angola"]
   end
 
+  def search
+      redirect_to "/nationlookup"
+  end
+
 end
 
 

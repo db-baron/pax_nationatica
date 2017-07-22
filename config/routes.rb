@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    get 'nations/nationview'
+    get '/nationlookup/:continent_id' => 
 
     root "users#new"
     # get "/" => "users#new" # The same thing as root
@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
     get "/nations" => "nations#index"
     get "nations/:id" => "nations#show"
+
+    post "/search" => "nations#search"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
