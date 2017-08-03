@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
 html {
 }
 
@@ -47,6 +46,27 @@ body{
     text-decoration: underline;
     font-size: 54px;
     color: black;
+    Width:100%;
+}
+
+.container {
+    Width:100%;
+}
+
+.centered-gif {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.label {
+    font-size: 8px;
+    color: grey;
+}
+
+.subtitle {
+
 }
 
 @font-face {
@@ -55,7 +75,6 @@ body{
     font-weight:normal;
     font-style:normal;
 }
-
 
 @font-face {
     font-family: 'League Gothic';

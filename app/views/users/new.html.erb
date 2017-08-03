@@ -1,9 +1,21 @@
 <div class='container'>
-  <h1>Welcome To Pax Nationatica</h1>
-  <div class='row'>
+  <h1 class="title">Welcome To Pax Nationatica</h1>
+  <p></p>
+  <h3 class="main">About</h3>
+  <h4> Want to know when a nation was at it's apex, it's golden age, it's time of glory? Well don't slog through Wikipedia,
+      like a tragic fool, just look it up here and glory in the cyclic nature of world history. Because who knows when <i>your</i>
+      nation is due for a rise or fall...
+  </h4>
+  <!-- <img class="centered-gif" src="giphy.gif" width="520" height="270" class="giphy-embed" title="Those Parthians could teach the Germans a thing or two about fighting two-front wars" allowFullScreen></img> -->
+  <!-- <a><img src='https://media.giphy.com/media/xT9DPofNeoS0B0Nk7C/giphy.gif' onmouseover="somefunction();"></a> -->
+
+ <img class="centered-gif" src='https://media.giphy.com/media/xT9DPofNeoS0B0Nk7C/giphy.gif' title="Those Parthians could teach the Germans a thing or two about fighting two-front wars" allowFullScreen></img>
+ <br> 
+ <p class="label" >via GIPHY</p>
+ <div class='row'>
 
     <div class='col-md-3'>
-      <h3>Register</h3>
+      <h3 class="main">Register</h3>
       <form action="/register" method="post">
         <input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
         <!-- <div class="form-group">
@@ -32,7 +44,7 @@
     </div>
 
     <div class='col-md-3'>
-      <h3>Log In</h3>
+      <h3 class="main">Log In</h3>
       <form action="/login" method='post'>
         <input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
         <div class="form-group">
