@@ -7,7 +7,14 @@ class NationsController < ApplicationController
   end
 
   def search
-      redirect_to "/nationlookup"
+      @found_nations = Nation.where(timeperiod: params[:timeperiod])
+      if @found_nations
+          redirect_to "/index"
+      else
+        #   @message.errors.full_messages
+          render text: "No nations found for that time and location"
+      end
+
   end
 
 end

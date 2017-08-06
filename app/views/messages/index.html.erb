@@ -11,14 +11,14 @@
         <br>
         <h3 class="main">Welcome: <strong><%= @user.email %></strong></h3>
 
-        <h4>Select a Region and Time Period</h4>
+        <h4>Select a Region and/or a Time Period</h4>
         <form action="/search" method="post">
-            <select name="continent">
+            <select name="continent_search">
                 <%= @nations.each do |nation| %>
                     <option value="<%= nation.continent %>"><%= nation.continent %></option>
                 <% end %>
             </select>
-            <select name="timeperiod">
+            <select name="timeperiod_search">
                 <%= @nations.each do |nation| %>
                     <option value="<%= nation.timeperiod %>"><%= nation.timeperiod %></option>
                 <% end %>
