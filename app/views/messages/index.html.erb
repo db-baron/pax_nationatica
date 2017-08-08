@@ -3,16 +3,20 @@
     <!-- <link rel="stylesheet" type="text/css" href="application.css"> -->
 </head>
 <html>
-   <div>
+   <div class="roundcorners">
         <h1 class="title">PAX NATIONATICA</h1>
         <h3 class="historic">Nations Rising and Falling Every Day</h3>
+        <h3 class="main">About</h3>
+        <h4>Golden ages. Every region of the world, and virtually every nation of people has experienced one or more.
+            A country that might be considered a "failed state" today most likely has a long and rich history of building expansive empires and
+            glorious contributions to world art and culture. And just as likely that golden age ended to signal the rise of a new power, thus
+            causing the cycle to start anew. It is good sometimes, to look to the past to see that all power is fleeting, and that the backwaters
+            of one year have been, and might become again, the 800 pound gorilla of another.
+        </h4>
         <br>
-
-        <br>
-        <h3 class="main">Welcome: <strong><%= @user.email %></strong></h3>
-
         <h4>Select a Region and/or a Time Period</h4>
         <form action="/search" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <select name="continent_search">
                 <%= @nations.each do |nation| %>
                     <option value="<%= nation.continent %>"><%= nation.continent %></option>
@@ -26,7 +30,7 @@
             <input type="submit" value="Submit">
         </form>
         <br>
-        <h4>OR search from the master list of nations....</h4>
+        <h4>OR search from the current master list of nations....</h4>
         <% @nations.each do |nation| %>
             <!-- <h4 class="nations"><%= nation.nation_name %></h4> -->
             <!-- <p><%= nation.empire %></p> -->
@@ -42,8 +46,10 @@
             <li><a href="/sudan">Sudan</a></li>
             <li><a href="/usa">The United States</a></li>
         </ul> -->
+    </div>
+    <h3 class="main">Welcome: <strong><%= @user.email %></strong></h3>
 
-
+    <div>
         <h3 class="main">Comments</h3>
         <form action="/messages" method="post">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -58,4 +64,10 @@
         	<p class="sub"><%= message.message %></p>
         <% end %>
    </div>
+   <br>
+   <form action="/logout" method="post">
+       <button type="submit" class="btn btn-default">Log Out</button>
+   </form>
+   <br>
+   <br>
 </html>

@@ -7,9 +7,10 @@ class NationsController < ApplicationController
   end
 
   def search
-      @found_nations = Nation.where(timeperiod: params[:timeperiod])
+      @found_nations = Nation.find(params[:timeperiod])
+    #   @found_nations = Nation.where(timeperiod: params[:timeperiod])
       if @found_nations
-          redirect_to "/index"
+          render json: @found_nations
       else
         #   @message.errors.full_messages
           render text: "No nations found for that time and location"
@@ -18,6 +19,3 @@ class NationsController < ApplicationController
   end
 
 end
-
-
-@user = User.find_by(username: params[:username])
