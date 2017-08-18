@@ -64,12 +64,24 @@ body{
     Width:100%;
 }
 
+.loginreg {
+    display: inline-block;
+    vertical-align: text-top;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.loginreg_entry {
+  width: 250px;
+}
+
 .container {
     Width:100%;
 }
 
 .centered-gif {
     margin: auto;
+
     width: 65%;
     border: 1.5px solid brown;
     padding: 2.5px;

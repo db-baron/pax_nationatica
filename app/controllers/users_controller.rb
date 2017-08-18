@@ -30,6 +30,9 @@ class UsersController < ApplicationController
   def logout
       reset_session
       redirect_to "/"
+      # @user = User.find(session[:id]).destroy
+      # session[:user_id] = nil
+      # redirect_to "users/new"
   end
 
   def user_params

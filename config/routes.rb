@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
     root "users#new"
-    # get "/" => "users#new" # The same thing as root
+    get "/" => "users#new" # The same thing as root
 
     get "users/new" => "users#new"
     get "/index" => "messages#index"
 
     post "/register" => "users#register"
 
+    get "/logout" => "users#logout"
     post "/login" => "users#login"
-    delete "logout" => "users#logout"
 
     get "messages" => "messages#index"
     post "messages" => "messages#create"
@@ -17,7 +17,8 @@ Rails.application.routes.draw do
     get "/nations" => "nations#index"
     get "nations/:id" => "nations#show"
 
-    post "/search" => "nations#search"
+    get "/search" => "nations#search"
+    post "display/:id" => "nations#display"
     # get '/nationlookup/:continent_id' => '/nationlookup/:nation'
 
 
