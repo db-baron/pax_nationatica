@@ -72,11 +72,12 @@ body{
 }
 
 .loginreg_entry {
-  width: 250px;
+    width: 250px;
 }
 
 .container {
-    Width:100%;
+    width:100%;
+    padding-bottom: 100px;
 }
 
 .centered-gif {
@@ -94,6 +95,16 @@ body{
 
 .subtitle {
 
+}
+
+.bottom_bar {
+    display: inline;
+    background-color: crimson;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 @font-face {
