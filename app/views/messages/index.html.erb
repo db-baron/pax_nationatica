@@ -7,8 +7,10 @@
         <h1 class="title">PAX NATIONATICA</h1>
         <h3 class="historic">Nations Rising and Falling Every Day</h3>
         <h3 class="main">Pax</h3>
-        <h4>Pax is latin for Peace, but it can be roughly translated as a different term: hegemony. In other words a type of golden age.
-            Nationatica refers to a Nation, a group of people who see themselves as a cohesive and coherent unit.
+        <h4><strong>Pax</strong> is latin for Peace, but a lot of the time you'll see it used to describe a different term: hegemony.
+          <br>
+          <br>
+            <strong>Nationatica</strong> refers to a Nation, a group of people who see themselves as a cohesive and coherent unit.
         </h4>
         <h4>
             Virtually every nation of people has experienced at least one Pax in it's history.
@@ -18,7 +20,7 @@
             of one year have been, and might become again, the 800 pound gorilla of another.
         </h4>
         <br>
-        <h4>Select a Region and/or a Time Period. New nations will be added periodically.</h4>
+        <h4>Select a Region and/or a Time Period. Check for updates with new nations.</h4>
         <form action="/display" method="post">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <select name="continent_search">
@@ -35,10 +37,10 @@
         </form>
         <br>
         <h4>OR search from the current master list of nations....</h4>
+
         <% @nations.each do |nation| %>
             <h4><li><a href="/<%= nation.nation_name %>"><%= nation.nation_name %></a></li></h4>
         <% end %>
-
         <br>
         <br>
         <!-- <ul>

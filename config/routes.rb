@@ -17,8 +17,8 @@ Rails.application.routes.draw do
     get "/nations" => "nations#index"
     get "nations/:id" => "nations#show"
 
-    get "/search" => "nations#search"
-    post "display/:id" => "nations#display"
+    get "/:nation_name" => "nations#search_direct"
+    get "/get_nation" => "nations#nationview"
     # get '/nationlookup/:continent_id' => '/nationlookup/:nation'
 
 

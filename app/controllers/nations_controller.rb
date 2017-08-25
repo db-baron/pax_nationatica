@@ -6,8 +6,8 @@ class NationsController < ApplicationController
     # @nations = ["France", "Brasil", "Angola"]
   end
 
-  def search
-      @nations_list = Nation.find(params[:timeperiod])
+  def search_dropdown
+      @nations_found = Nation.find(params[:timeperiod])
     #   @nations_list = Nation.where(timeperiod: params[:timeperiod])
       if @nations_list
           render json: @nations_list
@@ -17,7 +17,10 @@ class NationsController < ApplicationController
       end
   end
 
-  def display
-    @
+  def search_direct
+      # @selected_nation = Nation.find(params[:nation_name])
+      @selected_nation = Nation.find_by(nation_name: params[:nation_name])
+      render json: @selected_nation
+  end
 
 end
