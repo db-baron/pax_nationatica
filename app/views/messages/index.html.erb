@@ -7,30 +7,30 @@
         <h1 class="title">PAX NATIONATICA</h1>
         <h3 class="historic">Nations Rising and Falling Every Day</h3>
         <h3 class="main">Pax</h3>
-        <h4><strong>Pax</strong> is latin for Peace, but a lot of the time you'll see it used to describe a different term: hegemony.
+        <h4><strong>Pax</strong> is latin for Peace, but often times you'll see it used to describe a different term: hegemony.
           <br>
           <br>
-            <strong>Nationatica</strong> refers to a Nation, a group of people who see themselves as a cohesive and coherent unit.
+            <strong>Nationatica</strong> is bastardized latin to mean Nation, a group of people who see themselves as a cohesive and coherent unit.
         </h4>
         <h4>
-            Virtually every nation of people has experienced at least one Pax in it's history.
-            A country that might be considered a "failed state" today most likely has a long and rich history of building expansive empires and
-            glorious contributions to world art and culture. And just as likely that golden age ended to signal the rise of a new power, thus
-            causing the cycle to start anew. It is good sometimes, to look to the past to see that all power is fleeting, and that the backwaters
-            of one year have been, and might become again, the 800 pound gorilla of another.
+            Virtually every nation of people on eath has seen at least one Pax in it's history.
+            A country considered a failed state today probably has at least one period of regional dominance with many
+            significant contributions to world art and culture. And just as likely, that golden age ended to signal the rise of a new power, thus the
+            cycle starting anew. It is good sometimes, to look to the past to see that what we consider world power is fleeting, and that the backwaters
+            of one year have been, and might again become, the 800 pound gorilla of another.
         </h4>
         <br>
-        <h4>Select a Region and/or a Time Period. Check for updates with new nations.</h4>
+        <h4>Select a Region and/or a Time Period. Check back for periodic updates with new nations.</h4>
         <form action="/display" method="post">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <select name="continent_search">
-                <%= @nations.each do |nation| %>
-                    <option value="<%= nation.continent %>"><%= nation.continent %></option>
+                <%= @nations.select("DISTINCT(continent)").each do |c| %>
+                    <option value="<%= c.continent %>"><%= c.continent %></option>
                 <% end %>
             </select>
             <select name="timeperiod_search">
-                <%= @nations.each do |nation| %>
-                    <option value="<%= nation.timeperiod %>"><%= nation.timeperiod %></option>
+                <%= @nations.select("DISTINCT(timeperiod)").each do |t| %>
+                    <option value="<%= t.timeperiod %>"><%= t.timeperiod %></option>
                 <% end %>
             </select>
             <input type="submit" value="Submit">

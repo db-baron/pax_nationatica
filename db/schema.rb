@@ -11,15 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170806084728) do
+ActiveRecord::Schema.define(version: 20170828021100) do
 
   create_table "Nations", force: :cascade do |t|
-    t.string   "nation_name", null: false
-    t.string   "empire",      null: false
+    t.string   "nation_name",  null: false
+    t.string   "empire",       null: false
     t.string   "continent"
     t.string   "timeperiod"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "summary"
+    t.string   "ica"
+    t.text     "rise"
+    t.text     "fall"
+    t.text     "achievements"
+    t.string   "image"
   end
 
   create_table "Users", force: :cascade do |t|
