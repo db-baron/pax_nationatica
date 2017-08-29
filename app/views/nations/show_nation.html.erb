@@ -1,4 +1,5 @@
 <h1><%= @selected_nation.empire %> - <strong>Pax <%= @selected_nation.ica %></strong></h1>
+<h4><%= link_to 'Back to Nation Page', :back %></h4>
 <br>
 <h3 style="color:#7C2E00;"><u><strong>Summary</strong></u></h3>
 <h4><%= @selected_nation.summary %></h4>
@@ -9,11 +10,14 @@
 </div>
 
 <br>
-<h3><u>Rise</u></h3>
+<h3 style="color:#7C2E00;"><u>Rise</u></h3>
 <h4><%= @selected_nation.rise %></h4>
 <br>
-<h3><u>Fall</u></h3>
+<h3 style="color:#7C2E00;"><u>Fall</u></h3>
 <h4><%= @selected_nation.fall %></h4>
 <br>
-<h3><u>Achievements</u></h3>
+<h3 style="color:#7C2E00;"><u>Achievements</u></h3>
 <h4><%= @selected_nation.achievements %></h4>
+<br>
+<br>
+<br>

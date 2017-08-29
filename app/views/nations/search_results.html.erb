@@ -1,0 +1,6 @@
+<h2><u>Search Results</u></h2>
+
+
+<% @nations_found.each do |nation| %>
+    <h4><li><a href="/<%= nation.nation_name %>"><%= nation.nation_name %></a></li></h4>
+<% end %>
