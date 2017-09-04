@@ -19,8 +19,9 @@ Rails.application.routes.draw do
     get "/dropdown_search" => "nations#dropdown_search"
     get "/:nation_name" => "nations#show_nation"
 
+    get "/about_path" => "application#about"
+    get "/faq_path" => "application#faq"
     # get "/get_nation" => "nations#nationview"
-
 
     # get '/nationlookup/:continent_id' => '/nationlookup/:nation'
 
