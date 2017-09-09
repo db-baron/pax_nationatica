@@ -23,6 +23,7 @@
 
 <body>
   <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <% unless action_name == "new" %>  <!-- We don't want to display the navbar on the login/registration page -->
     <header class="navbar  navbar-inverse">
@@ -32,8 +33,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
           <ul class="nav navbar-nav">
             <li><%= link_to 'HOME', :index %></li>
-            <li><%=link_to "ABOUT", :about_path%></li>
-            <li><%=link_to "FAQS", :faq_path %></li>
+            <!-- <li><%=link_to "ABOUT", '/about_path'%></li> -->
+            <li><a href="/about_path">ABOUT</a></li>
+
+            <li><%=link_to list.site.try(:faw) %></li>
+            <li><%=link_to "FAQS", '/faq_path' %></li>
             <li><a href="#">CONTACT</a></li>  <!-- The ="#" is just a null value. It will take the user back to the same page they're on -->
             <li><%=link_to "LOGOUT", :logout %></li>
           </ul>
