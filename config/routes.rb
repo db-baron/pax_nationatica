@@ -14,13 +14,14 @@ Rails.application.routes.draw do
     get "messages" => "messages#index"
     post "messages" => "messages#create"
 
+    get "/about_path" => "application#about"
+    get "/faq_path" => "application#faq"
+
     get "/nations" => "nations#index"
 
     get "/dropdown_search" => "nations#dropdown_search"
     get "/:nation_name" => "nations#show_nation"
 
-    get "/about_path" => "application#about"
-    get "/faq_path" => "application#faq"
     # get "/get_nation" => "nations#nationview"
 
     # get '/nationlookup/:continent_id' => '/nationlookup/:nation'

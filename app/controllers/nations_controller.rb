@@ -22,7 +22,6 @@ class NationsController < ApplicationController
 
   def show_nation
       @selected_nation = Nation.find_by(nation_name: params[:nation_name])
-      # @selected_nation = Nation.find_by(nation_name: params[:nation_name])
   end
 
 end
