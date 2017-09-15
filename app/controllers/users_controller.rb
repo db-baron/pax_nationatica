@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to "/messages"
     else
-      render text: "Invalid login"
+      render text: "Invalid login, please return to login screen and enter a valid email and password"
     end
   end
 
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name,:email,:favorite_nation,:password,:password_confir)
-    redirect_to "/get_nation"
+    # redirect_to "/get_nation"
   end
 
 end

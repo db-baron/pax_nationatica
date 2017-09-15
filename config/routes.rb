@@ -3,10 +3,11 @@ Rails.application.routes.draw do
     root "users#new"
     get "/" => "users#new" # The same thing as root
 
+    post "/register" => "users#register"
+
     get "users/new" => "users#new"
     get "/index" => "messages#index"
 
-    post "/register" => "users#register"
 
     get "/logout" => "users#logout"
     post "/login" => "users#login"
