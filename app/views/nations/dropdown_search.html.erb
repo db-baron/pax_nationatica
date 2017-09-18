@@ -1,11 +1,11 @@
 <h2 class="title"><u>Search Results</u></h2>
-<h3>These Nations Fit Your Search Criteria</h3>
+<h3>These Paxes fit your search criteria</h3>
 
 <% if @single_nation %>
   <h3><li><a href="/<%= @single_nation.nation_name %>"><%= @single_nation.nation_name %> - <%= @single_nation.empire %></a></li></h3>
 
 <% elsif @nations_found %>
   <% @nations_found.each do |nation| %>
-      <h3><li><a href="/<%= nation.nation_name %>"><%= nation.nation_name %></a></li></h3>
+      <h3><li><a href="/<%= nation.nation_name %>"><%= nation.empire %> (<%= nation.nation_name %>)</a></li></h3>
   <% end %>
 <% end %>

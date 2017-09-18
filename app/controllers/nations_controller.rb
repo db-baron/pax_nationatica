@@ -6,11 +6,11 @@ class NationsController < ApplicationController
   end
 
   def dropdown_search
-      @nations_found = Nation.find_by(continent: params[:continent_search], timeperiod: params[:timeperiod_search])
+      @nations_found = Nation.where(continent: params[:continent_search], timeperiod: params[:timeperiod_search])
       if @nations_found
           # render json: @nations_found.empire
       else
-          render text: "Sorry, No nations found for that time and location, check back soon."
+          render text: "Sorry, no nations found for that time and location, check back soon."
       end
       # Iteration handling for multiple nations found
       if @nations_found.respond_to?(:each)

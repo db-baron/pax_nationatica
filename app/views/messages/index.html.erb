@@ -7,9 +7,9 @@
         <h1 class="title">PAX NATIONATICA</h1>
         <h3 class="historic">Nations Rising and Falling Every Day</h3>
         <h3 class="main">Pax</h3>
-        <h4><strong>Pax</strong> is latin for <strong>peace</strong>, but usually you'll see it used in another way: to describe a period of hegemony.</h4>
-        <h4><strong>Nationatica</strong> is bastardized latin to mean <strong>nation</strong>, i.e a group of people who see themselves as a cohesive and coherent unit.</h4>
-        <h4>So that's what this site is about, when each nation at it's Pax, it's moment of glory, it's golden age. But what's the twist? Well a lot of things can be considered a "nation". So why limit ourselves.</h4>
+        <h4><strong>Pax</strong> is latin for peace, but usually you'll see it used to describe a period of hegemony for a particular political entitty.</h4>
+        <h4><strong>Nationatica</strong> is bastardized latin to mean <strong>nation</strong> a group of people who see themselves as a cohesive and coherent unit.</h4>
+        <h4>So that's what this site is about, when each nation at it's Pax, it's moment of glory, and (ususally) it's golden age. But what's the twist? Well a lot of things can be considered a "nation". So why limit ourselves.</h4>
         <!-- <h4>
             Virtually every nation of people on eath has seen at least one Pax in it's history.
             A country considered a failed state today probably has at least one period of regional dominance with many
@@ -18,12 +18,11 @@
             of one year have been, and might again become, the 800 pound gorilla of another.
         </h4> -->
         <br>
-        <h4>Select a Region and/or a Time Period. Check back for periodic updates with new nations.</h4>
+        <h4>Select a Region and Time Period to search for a nation. Check back for periodic updates with new nations.</h4>
         <form action="/dropdown_search" method="get">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
             <select name="continent_search">
                 <%= @nations.select("DISTINCT(continent)").each do |c| %>
-                    <!-- <option value="<%= c %>"> --- </option> -->
                     <option value="<%= c.continent %>"><%= c.continent %></option>
                 <% end %>
             </select>

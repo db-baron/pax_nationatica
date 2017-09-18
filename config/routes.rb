@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
     get "/about_path" => "application#about"
     get "/faq_path" => "application#faq"
+    get "/contact_path" => "application#contact"
 
     get "/nations" => "nations#index"
 

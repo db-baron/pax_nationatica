@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20170830074400) do
     t.text     "fall"
     t.text     "achievements"
     t.string   "image"
-    t.string   "dates"
   end
 
   create_table "Users", force: :cascade do |t|

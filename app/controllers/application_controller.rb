@@ -11,4 +11,7 @@ class ApplicationController < ActionController::Base
   def faq
   end
 
+  def contact
+  end
+
 end

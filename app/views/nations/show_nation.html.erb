@@ -1,13 +1,12 @@
 <h1 class="title"><%= @selected_nation.empire %>: <strong>Pax <%= @selected_nation.ica %></strong></h1>
-<h2><%= @selected_nation.dates %></h2>
-<h4><%= link_to 'Back to Nations', :back %></h4>
+<h2><span class='main'>Pax dates:</span> <%= @selected_nation.dates %></h2>
 <br>
 <h3 style="color:#7C2E00;"><u><strong>Summary</strong></u></h3>
 <h4><%= @selected_nation.summary %></h4>
 <br>
 
 <div>
-  <img src="<%= @selected_nation.image %>" title="The transition from Roman Republic to Empire is when the territory map turns from brown to purple" style="width:340px;height:260px;"></img>
+  <img src="<%= @selected_nation.image %>" style="height:55%; width:55%;"></img>
 </div>
 
 <br>
